@@ -28,7 +28,10 @@ services:
       - postgres
 
   app:
-    build: .
+    image: spring-petclinic
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     depends_on:
