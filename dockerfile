@@ -9,5 +9,5 @@ COPY target/spring-petclinic-3.3.0-SNAPSHOT.jar /app/spring-petclinic-3.3.0-SNAP
 
 EXPOSE 8080
 
-# Run the jar file
+# Run the jar files
 ENTRYPOINT ["java", "-jar", "spring-petclinic-3.3.0-SNAPSHOT.jar"]
