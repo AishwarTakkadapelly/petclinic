@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Java CD with Maven
 
 on:
   push:
@@ -122,14 +122,14 @@ jobs:
 
             # Pull Docker image and run container
             echo "Pulling Docker image..."
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/spring-petclinic:latest
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/springboot:latest
 
             echo "Stopping and removing old container..."
-            sudo docker stop spring-petclinic || true
-            sudo docker rm spring-petclinic || true
+            sudo docker stop springboot || true
+            sudo docker rm springboot || true
 
             echo "Running new container..."
-            sudo docker run -d -p 8081:8080 --name spring-petclinic ${{ secrets.DOCKER_USERNAME }}/spring-petclinic:latest
+            sudo docker run -d -p 8080:8080 --name springboot ${{ secrets.DOCKER_USERNAME }}/springboot:latest
           timeout: 30s
           command_timeout: 10m
           debug: false
