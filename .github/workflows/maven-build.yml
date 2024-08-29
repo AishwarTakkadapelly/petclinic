@@ -28,7 +28,7 @@ jobs:
         run: chmod +x ./mvnw
 
       - name: Build with Maven Wrapper
-        run: ./mvnw -B compile
+        run: ./mvnw -B package # Changed to package to generate JAR
 
   test:
     runs-on: ubuntu-latest
