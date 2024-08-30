@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/spring-petclinic-3.3.0-SNAPSHOT.jar /app/spring-petclinic-3.3.0-SNAPSHOT.jar
 
 # Expose the port the app runs on
-EXPOSE 8080
+EXPOSE 80
 
 # Define the command to run the JAR file
 ENTRYPOINT ["java", "-jar", "/app/spring-petclinic-3.3.0-SNAPSHOT.jar"]
